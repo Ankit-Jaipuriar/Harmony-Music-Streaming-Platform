@@ -102,25 +102,25 @@ graph TB
     PS -.->|"Fetch Config"| CFG
     RS -.->|"Fetch Config"| CFG
 
-    style CLIENT fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#eee
-    style GATEWAY fill:#16213e,stroke:#e94560,stroke-width:2px,color:#eee
-    style SERVICES fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
-    style INFRA fill:#533483,stroke:#e94560,stroke-width:2px,color:#eee
-    style EXTERNAL fill:#b80d57,stroke:#fff,stroke-width:2px,color:#fff
-    style DATA fill:#4a0e4e,stroke:#e94560,stroke-width:2px,color:#eee
+    style CLIENT fill:#e8f4fd,stroke:#333,stroke-width:2px,color:#000
+    style GATEWAY fill:#fce4ec,stroke:#333,stroke-width:2px,color:#000
+    style SERVICES fill:#e8f5e9,stroke:#333,stroke-width:2px,color:#000
+    style INFRA fill:#f3e5f5,stroke:#333,stroke-width:2px,color:#000
+    style EXTERNAL fill:#fff3e0,stroke:#333,stroke-width:2px,color:#000
+    style DATA fill:#fce4ec,stroke:#333,stroke-width:2px,color:#000
 
-    style FE fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
-    style GW fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
-    style MS fill:#53a8b6,stroke:#fff,stroke-width:2px,color:#fff
-    style SS fill:#53a8b6,stroke:#fff,stroke-width:2px,color:#fff
-    style PS fill:#53a8b6,stroke:#fff,stroke-width:2px,color:#fff
-    style RS fill:#53a8b6,stroke:#fff,stroke-width:2px,color:#fff
-    style EUR fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
-    style CFG fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
-    style KFK fill:#222,stroke:#e94560,stroke-width:2px,color:#fff
-    style ZK fill:#222,stroke:#e94560,stroke-width:2px,color:#fff
-    style YT fill:#c0392b,stroke:#fff,stroke-width:2px,color:#fff
-    style H2 fill:#8e44ad,stroke:#fff,stroke-width:2px,color:#fff
+    style FE fill:#42a5f5,stroke:#000,stroke-width:2px,color:#000
+    style GW fill:#ef5350,stroke:#000,stroke-width:2px,color:#000
+    style MS fill:#66bb6a,stroke:#000,stroke-width:2px,color:#000
+    style SS fill:#66bb6a,stroke:#000,stroke-width:2px,color:#000
+    style PS fill:#66bb6a,stroke:#000,stroke-width:2px,color:#000
+    style RS fill:#66bb6a,stroke:#000,stroke-width:2px,color:#000
+    style EUR fill:#ab47bc,stroke:#000,stroke-width:2px,color:#000
+    style CFG fill:#ab47bc,stroke:#000,stroke-width:2px,color:#000
+    style KFK fill:#ffa726,stroke:#000,stroke-width:2px,color:#000
+    style ZK fill:#ffa726,stroke:#000,stroke-width:2px,color:#000
+    style YT fill:#ef5350,stroke:#000,stroke-width:2px,color:#000
+    style H2 fill:#ab47bc,stroke:#000,stroke-width:2px,color:#000
 ```
 
 ---
@@ -193,35 +193,35 @@ flowchart LR
     G1 --> P2
     G1 --> P3
 
-    style USER fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#eee
-    style GATEWAY fill:#16213e,stroke:#e94560,stroke-width:2px,color:#eee
-    style SEARCH fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
-    style STREAM fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
-    style KAFKA fill:#111,stroke:#e94560,stroke-width:2px,color:#eee
-    style RECOMMEND fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
-    style PLAYLIST fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
-    style YOUTUBE fill:#b80d57,stroke:#fff,stroke-width:2px,color:#fff
+    style USER fill:#e8f4fd,stroke:#333,stroke-width:2px,color:#000
+    style GATEWAY fill:#fce4ec,stroke:#333,stroke-width:2px,color:#000
+    style SEARCH fill:#e8f5e9,stroke:#333,stroke-width:2px,color:#000
+    style STREAM fill:#e8f5e9,stroke:#333,stroke-width:2px,color:#000
+    style KAFKA fill:#fff3e0,stroke:#333,stroke-width:2px,color:#000
+    style RECOMMEND fill:#e8f5e9,stroke:#333,stroke-width:2px,color:#000
+    style PLAYLIST fill:#e8f5e9,stroke:#333,stroke-width:2px,color:#000
+    style YOUTUBE fill:#fff3e0,stroke:#333,stroke-width:2px,color:#000
 
-    style U1 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
-    style U2 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
-    style U3 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
-    style U4 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
-    style U5 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
-    style G1 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
-    style S1 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style ST1 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style ST2 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style K1 fill:#222,stroke:#e94560,stroke-width:1px,color:#fff
-    style R1 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style R2 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style R3 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style R4 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style P1 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style P2 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style P3 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style P4 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
-    style YT1 fill:#c0392b,stroke:#fff,stroke-width:1px,color:#fff
-    style YT2 fill:#c0392b,stroke:#fff,stroke-width:1px,color:#fff
+    style U1 fill:#42a5f5,stroke:#000,stroke-width:1px,color:#000
+    style U2 fill:#42a5f5,stroke:#000,stroke-width:1px,color:#000
+    style U3 fill:#42a5f5,stroke:#000,stroke-width:1px,color:#000
+    style U4 fill:#42a5f5,stroke:#000,stroke-width:1px,color:#000
+    style U5 fill:#42a5f5,stroke:#000,stroke-width:1px,color:#000
+    style G1 fill:#ef5350,stroke:#000,stroke-width:1px,color:#000
+    style S1 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style ST1 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style ST2 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style K1 fill:#ffa726,stroke:#000,stroke-width:1px,color:#000
+    style R1 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style R2 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style R3 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style R4 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style P1 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style P2 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style P3 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style P4 fill:#66bb6a,stroke:#000,stroke-width:1px,color:#000
+    style YT1 fill:#ef5350,stroke:#000,stroke-width:1px,color:#000
+    style YT2 fill:#ef5350,stroke:#000,stroke-width:1px,color:#000
 ```
 
 ### 📋 Flow Breakdown
