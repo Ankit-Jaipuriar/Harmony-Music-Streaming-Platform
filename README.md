@@ -47,7 +47,7 @@ Harmony is a full-stack music streaming platform that demonstrates modern micros
 ## 🏗 Architecture
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'lineColor': '#000000', 'textColor': '#000000'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {'lineColor': '#000000', 'textColor': '#000000', 'primaryBorderColor': '#000000', 'background': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#000000'}}}%%
 graph TB
     subgraph CLIENT["CLIENT LAYER"]
         FE["React Frontend\n Vite - Port 5173"]
@@ -131,7 +131,7 @@ graph TB
 The diagram below traces how data flows through the system for core user operations, showing every API endpoint involved.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'lineColor': '#000000', 'textColor': '#000000'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': {'lineColor': '#000000', 'textColor': '#000000', 'primaryBorderColor': '#000000', 'background': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#000000'}}}%%
 flowchart LR
     subgraph USER["USER ACTIONS"]
         U1["Search Song"]
