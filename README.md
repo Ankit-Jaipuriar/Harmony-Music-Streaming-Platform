@@ -48,34 +48,34 @@ Harmony is a full-stack music streaming platform that demonstrates modern micros
 
 ```mermaid
 graph TB
-    subgraph CLIENT["🖥️ Client Layer"]
-        FE["React Frontend<br/>(Vite • Port 5173)"]
+    subgraph CLIENT["CLIENT LAYER"]
+        FE["React Frontend\n Vite - Port 5173"]
     end
 
-    subgraph GATEWAY["🚪 API Gateway Layer"]
-        GW["API Gateway<br/>(Port 8080)"]
+    subgraph GATEWAY["API GATEWAY LAYER"]
+        GW["API Gateway\n Port 8080"]
     end
 
-    subgraph INFRA["⚙️ Infrastructure"]
-        EUR["Eureka Discovery<br/>(Port 8761)"]
-        CFG["Config Server<br/>(Port 8888)"]
-        KFK["Apache Kafka<br/>(Port 9092)"]
-        ZK["Zookeeper<br/>(Port 2181)"]
+    subgraph INFRA["INFRASTRUCTURE"]
+        EUR["Eureka Discovery\n Port 8761"]
+        CFG["Config Server\n Port 8888"]
+        KFK["Apache Kafka\n Port 9092"]
+        ZK["Zookeeper\n Port 2181"]
     end
 
-    subgraph SERVICES["🎵 Business Services"]
-        MS["Music Search Service<br/>(Port 8081)"]
-        SS["Streaming Service<br/>(Port 8082)"]
-        PS["Playlist Service<br/>(Port 8083)"]
-        RS["Recommendation Service<br/>(Port 8084)"]
+    subgraph SERVICES["BUSINESS SERVICES"]
+        MS["Music Search Service\n Port 8081"]
+        SS["Streaming Service\n Port 8082"]
+        PS["Playlist Service\n Port 8083"]
+        RS["Recommendation Service\n Port 8084"]
     end
 
-    subgraph EXTERNAL["🌐 External"]
-        YT["YouTube API"]
+    subgraph EXTERNAL["EXTERNAL APIs"]
+        YT["YouTube Data API"]
     end
 
-    subgraph DATA["💾 Data Stores"]
-        H2["H2 Database<br/>(In-Memory)"]
+    subgraph DATA["DATA STORES"]
+        H2["H2 Database\n In-Memory"]
     end
 
     FE -->|"HTTP REST"| GW
@@ -102,12 +102,25 @@ graph TB
     PS -.->|"Fetch Config"| CFG
     RS -.->|"Fetch Config"| CFG
 
-    style CLIENT fill:#FFE066,stroke:#000,stroke-width:3px,color:#000
-    style GATEWAY fill:#FF6B9D,stroke:#000,stroke-width:3px,color:#000
-    style SERVICES fill:#4ECDC4,stroke:#000,stroke-width:3px,color:#000
-    style INFRA fill:#95E1D3,stroke:#000,stroke-width:3px,color:#000
-    style EXTERNAL fill:#DDA0DD,stroke:#000,stroke-width:3px,color:#000
-    style DATA fill:#F38181,stroke:#000,stroke-width:3px,color:#000
+    style CLIENT fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#eee
+    style GATEWAY fill:#16213e,stroke:#e94560,stroke-width:2px,color:#eee
+    style SERVICES fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
+    style INFRA fill:#533483,stroke:#e94560,stroke-width:2px,color:#eee
+    style EXTERNAL fill:#b80d57,stroke:#fff,stroke-width:2px,color:#fff
+    style DATA fill:#4a0e4e,stroke:#e94560,stroke-width:2px,color:#eee
+
+    style FE fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
+    style GW fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
+    style MS fill:#53a8b6,stroke:#fff,stroke-width:2px,color:#fff
+    style SS fill:#53a8b6,stroke:#fff,stroke-width:2px,color:#fff
+    style PS fill:#53a8b6,stroke:#fff,stroke-width:2px,color:#fff
+    style RS fill:#53a8b6,stroke:#fff,stroke-width:2px,color:#fff
+    style EUR fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
+    style CFG fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
+    style KFK fill:#222,stroke:#e94560,stroke-width:2px,color:#fff
+    style ZK fill:#222,stroke:#e94560,stroke-width:2px,color:#fff
+    style YT fill:#c0392b,stroke:#fff,stroke-width:2px,color:#fff
+    style H2 fill:#8e44ad,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -118,7 +131,7 @@ The diagram below traces how data flows through the system for core user operati
 
 ```mermaid
 flowchart LR
-    subgraph USER["👤 User Action"]
+    subgraph USER["USER ACTIONS"]
         U1["Search Song"]
         U2["Play Song"]
         U3["Skip to Next"]
@@ -126,38 +139,38 @@ flowchart LR
         U5["Add to Playlist"]
     end
 
-    subgraph GATEWAY["API Gateway :8080"]
+    subgraph GATEWAY["API GATEWAY :8080"]
         G1["Route Request"]
     end
 
-    subgraph SEARCH["Music Search :8081"]
-        S1["GET /music/search?q={query}"]
+    subgraph SEARCH["MUSIC SEARCH :8081"]
+        S1["GET /music/search?q=query"]
     end
 
-    subgraph STREAM["Streaming :8082"]
-        ST1["GET /stream/{videoId}"]
-        ST2["→ Publish SongPlayEvent"]
+    subgraph STREAM["STREAMING :8082"]
+        ST1["GET /stream/videoId"]
+        ST2["Publish SongPlayEvent"]
     end
 
-    subgraph KAFKA["Kafka Broker"]
+    subgraph KAFKA["KAFKA BROKER"]
         K1["song-play-events topic"]
     end
 
-    subgraph RECOMMEND["Recommendation :8084"]
+    subgraph RECOMMEND["RECOMMENDATION :8084"]
         R1["Consume SongPlayEvent"]
         R2["Build Transition Graph"]
         R3["GET /recommendation/top"]
-        R4["GET /recommendation/next/{id}"]
+        R4["GET /recommendation/next/id"]
     end
 
-    subgraph PLAYLIST["Playlist :8083"]
+    subgraph PLAYLIST["PLAYLIST :8083"]
         P1["POST /playlist"]
         P2["GET /playlist"]
-        P3["GET /playlist/{id}"]
-        P4["POST /playlist/{id}/songs/{songId}"]
+        P3["GET /playlist/id"]
+        P4["POST /playlist/id/songs/songId"]
     end
 
-    subgraph YOUTUBE["YouTube API"]
+    subgraph YOUTUBE["YOUTUBE API"]
         YT1["Search Results"]
         YT2["Stream URL"]
     end
@@ -167,7 +180,7 @@ flowchart LR
 
     U2 --> G1 --> ST1 -->|"videoId"| YT2
     YT2 -->|"streamUrl"| ST1
-    ST1 -->|"previousVideoId?"| ST2 --> K1
+    ST1 -->|"previousVideoId"| ST2 --> K1
 
     K1 --> R1 --> R2
     U3 --> G1 --> R4
@@ -180,14 +193,35 @@ flowchart LR
     G1 --> P2
     G1 --> P3
 
-    style USER fill:#FFE066,stroke:#000,stroke-width:2px,color:#000
-    style GATEWAY fill:#FF6B9D,stroke:#000,stroke-width:2px,color:#000
-    style SEARCH fill:#4ECDC4,stroke:#000,stroke-width:2px,color:#000
-    style STREAM fill:#45B7D1,stroke:#000,stroke-width:2px,color:#000
-    style KAFKA fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
-    style RECOMMEND fill:#96CEB4,stroke:#000,stroke-width:2px,color:#000
-    style PLAYLIST fill:#FFEAA7,stroke:#000,stroke-width:2px,color:#000
-    style YOUTUBE fill:#FF6B6B,stroke:#000,stroke-width:2px,color:#fff
+    style USER fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#eee
+    style GATEWAY fill:#16213e,stroke:#e94560,stroke-width:2px,color:#eee
+    style SEARCH fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
+    style STREAM fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
+    style KAFKA fill:#111,stroke:#e94560,stroke-width:2px,color:#eee
+    style RECOMMEND fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
+    style PLAYLIST fill:#0f3460,stroke:#53a8b6,stroke-width:2px,color:#eee
+    style YOUTUBE fill:#b80d57,stroke:#fff,stroke-width:2px,color:#fff
+
+    style U1 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
+    style U2 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
+    style U3 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
+    style U4 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
+    style U5 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
+    style G1 fill:#e94560,stroke:#fff,stroke-width:1px,color:#fff
+    style S1 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style ST1 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style ST2 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style K1 fill:#222,stroke:#e94560,stroke-width:1px,color:#fff
+    style R1 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style R2 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style R3 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style R4 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style P1 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style P2 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style P3 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style P4 fill:#53a8b6,stroke:#fff,stroke-width:1px,color:#fff
+    style YT1 fill:#c0392b,stroke:#fff,stroke-width:1px,color:#fff
+    style YT2 fill:#c0392b,stroke:#fff,stroke-width:1px,color:#fff
 ```
 
 ### 📋 Flow Breakdown
