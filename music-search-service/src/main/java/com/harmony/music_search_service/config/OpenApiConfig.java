@@ -1,7 +1,6 @@
 package com.harmony.music_search_service.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
@@ -29,9 +28,6 @@ public class OpenApiConfig {
                                 - Returns structured metadata for each result
                                 - Designed for high-throughput, low-latency queries
                                 """)
-                        .contact(new Contact()
-                                .name("Harmony Engineering")
-                                .email("engineering@harmony.dev"))
                         .license(new License()
                                 .name("MIT License")
                                 .url("https://opensource.org/licenses/MIT")))

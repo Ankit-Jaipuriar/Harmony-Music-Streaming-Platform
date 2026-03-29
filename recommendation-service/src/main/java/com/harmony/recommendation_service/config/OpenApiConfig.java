@@ -1,7 +1,6 @@
 package com.harmony.recommendation_service.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
@@ -31,9 +30,6 @@ public class OpenApiConfig {
                                 - Global "Top Songs" leaderboard based on aggregate play counts
                                 - Fully event-driven architecture with no synchronous dependencies
                                 """)
-                        .contact(new Contact()
-                                .name("Harmony Engineering")
-                                .email("engineering@harmony.dev"))
                         .license(new License()
                                 .name("MIT License")
                                 .url("https://opensource.org/licenses/MIT")))

@@ -1,7 +1,6 @@
 package com.harmony.streaming_service.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
@@ -29,9 +28,6 @@ public class OpenApiConfig {
                                 - Publishes song-play transition events via Kafka
                                 - Tracks sequential listening patterns for recommendation engine
                                 """)
-                        .contact(new Contact()
-                                .name("Harmony Engineering")
-                                .email("engineering@harmony.dev"))
                         .license(new License()
                                 .name("MIT License")
                                 .url("https://opensource.org/licenses/MIT")))

@@ -1,7 +1,6 @@
 package com.harmony.playlist_service.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
@@ -30,9 +29,6 @@ public class OpenApiConfig {
                                 - JPA-backed persistence with H2 database
                                 - RESTful API design with JSON request/response
                                 """)
-                        .contact(new Contact()
-                                .name("Harmony Engineering")
-                                .email("engineering@harmony.dev"))
                         .license(new License()
                                 .name("MIT License")
                                 .url("https://opensource.org/licenses/MIT")))
