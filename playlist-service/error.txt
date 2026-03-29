@@ -1,0 +1,45 @@
+[ERROR] COMPILATION ERROR : 
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[22,24] cannot find symbol
+  symbol:   method getName()
+  location: variable request of type com.harmony.playlist_service.dto.PlaylistRequest
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[23,24] cannot find symbol
+  symbol:   method getSongIds()
+  location: variable request of type com.harmony.playlist_service.dto.PlaylistRequest
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[36,20] cannot find symbol
+  symbol:   method getSongsIds()
+  location: variable playlist of type com.harmony.playlist_service.entity.Playlist
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[37,21] cannot find symbol
+  symbol:   method setSongsIds(java.util.ArrayList<java.lang.Object>)
+  location: variable playlist of type com.harmony.playlist_service.entity.Playlist
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[39,21] cannot find symbol
+  symbol:   method getSongsIds()
+  location: variable playlist of type com.harmony.playlist_service.entity.Playlist
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[40,21] cannot find symbol
+  symbol:   method getSongsIds()
+  location: variable playlist of type com.harmony.playlist_service.entity.Playlist
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project playlist-service: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[22,24] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable request of type com.harmony.playlist_service.dto.PlaylistRequest
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[23,24] cannot find symbol
+[ERROR]   symbol:   method getSongIds()
+[ERROR]   location: variable request of type com.harmony.playlist_service.dto.PlaylistRequest
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[36,20] cannot find symbol
+[ERROR]   symbol:   method getSongsIds()
+[ERROR]   location: variable playlist of type com.harmony.playlist_service.entity.Playlist
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[37,21] cannot find symbol
+[ERROR]   symbol:   method setSongsIds(java.util.ArrayList<java.lang.Object>)
+[ERROR]   location: variable playlist of type com.harmony.playlist_service.entity.Playlist
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[39,21] cannot find symbol
+[ERROR]   symbol:   method getSongsIds()
+[ERROR]   location: variable playlist of type com.harmony.playlist_service.entity.Playlist
+[ERROR] /C:/Users/ankit/Downloads/Harmony/playlist-service/src/main/java/com/harmony/playlist_service/service/impl/PlaylistServiceImpl.java:[40,21] cannot find symbol
+[ERROR]   symbol:   method getSongsIds()
+[ERROR]   location: variable playlist of type com.harmony.playlist_service.entity.Playlist
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,92 @@
+# ============================================
+#  Harmony — Root .gitignore
+#  Covers all microservices & frontend
+# ============================================
+
+# ------------------------------------------
+#  Java / Maven  (all microservices)
+# ------------------------------------------
+# Compiled output
+**/target/
+
+# Maven wrapper downloaded jar
+**/.mvn/wrapper/maven-wrapper.jar
+
+# ------------------------------------------
+#  IDE — IntelliJ IDEA
+# ------------------------------------------
+.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+out/
+
+# ------------------------------------------
+#  IDE — VS Code
+# ------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# ------------------------------------------
+#  IDE — Eclipse
+# ------------------------------------------
+.classpath
+.project
+.settings/
+bin/
+
+# ------------------------------------------
+#  OS-generated files
+# ------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# ------------------------------------------
+#  Logs
+# ------------------------------------------
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ------------------------------------------
+#  Frontend — Node / Vite  (frontend/)
+# ------------------------------------------
+**/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+*.local
+
+# ------------------------------------------
+#  Environment & Secrets
+# ------------------------------------------
+**/.env
+**/.env.*
+!**/.env.example
+
+# ------------------------------------------
+#  Temporary / scratch files
+# ------------------------------------------
+headers.txt
+headers-get.txt
+load_test.js
+warmup_test.py
+*.tmp
+*.bak
+
+# ------------------------------------------
+#  Spring Boot / Config
+# ------------------------------------------
+**/application-local.properties
+**/application-local.yml
+
+# ------------------------------------------
+#  Docker (optional — local volumes)
+# ------------------------------------------
+**/docker-data/
